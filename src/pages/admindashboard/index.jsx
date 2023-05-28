@@ -50,8 +50,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     axios
       .get(
-        `${config.baseUrl}/api/getstudentsByUserId?
-        }&&limit=${10}&&page=${page}`
+        `${config.baseUrl}/api/getstudentsByUserId?limit=${10}&&page=${page}`
       )
       .then((res) => {
         setStudentData(res.data.resultantData);
