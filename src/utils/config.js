@@ -1,5 +1,5 @@
 const config = {
-  baseUrl: "http://localhost:4000",
+  baseUrl: "https://imb-git-rcc-ajayjhadev.vercel.app",
 };
 
 export default config;
