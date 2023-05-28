@@ -1,5 +1,5 @@
 const config = {
-  baseUrl: "https://demo-intuitivedevstack.vercel.app",
+  baseUrl: "https://rcc-intuitivedevstack.vercel.app",
 };
 
 export default config;
