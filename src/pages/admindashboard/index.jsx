@@ -362,17 +362,6 @@ const AdminDashboard = () => {
                   </Button>
                 </div>
 
-                <div className="me-4">
-                  <Link
-                    href={"https://rajatdev1.github.io/exam-section/"}
-                    target="_blank"
-                  >
-                    <Button variant="success" style={{ cursor: "pointer" }}>
-                      Examination
-                    </Button>
-                  </Link>
-                </div>
-
                 <div className="sm">
                   <Button
                     variant="success"
