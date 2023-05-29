@@ -8,7 +8,7 @@ import { toast } from "react-hot-toast";
 import { Spinner } from "react-bootstrap";
 import config from "../utils/config.js";
 import Image from "next/image.js";
-import management from "../assests/management.jpg";
+import management from "../assests/RrRCCRrr.png";
 import Footer from "@/components/footer.jsx";
 
 export default function Login() {

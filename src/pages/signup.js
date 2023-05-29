@@ -10,7 +10,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import config from "@/utils/config";
 import Image from "next/image";
-import management from "../assests/management.jpg";
+import management from "../assests/RrRCCRrr.png";
 import Footer from "@/components/footer.jsx";
 
 const phoneRegExp =
