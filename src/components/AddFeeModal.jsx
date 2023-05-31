@@ -13,10 +13,10 @@ import { BsCalendarDate } from "react-icons/bs";
 import DatePicker from "react-datepicker";
 
 const schema = yup.object({
-  paid_amount: yup.string().required("Amount is a required field"),
-  paid_month: yup.string().required("Paid Month is a required field"),
-  deposited_date: yup.string().required("Deposited date is a required field"),
-  tuition_fee: yup.string().required("Tuition Fee is a required field"),
+  paid_amount: yup.string(),
+  paid_month: yup.string(),
+  deposited_date: yup.string(),
+  tuition_fee: yup.string(),
   transport_fee: yup.string(),
   examination_fee: yup.string(),
 });
@@ -44,15 +44,6 @@ const Index = ({
 
   const onSubmit = (data) => {
     setLoading(true);
-
-    function convert(str) {
-      let date = new Date(str),
-        mnth = ("0" + (date.getMonth() + 1)).slice(-2),
-        day = ("0" + date.getDate()).slice(-2);
-      return [day, mnth, date.getFullYear()].join("-");
-    }
-    data.deposited_date = convert(data.deposited_date);
-    console.log(data);
 
     reset();
 
@@ -141,32 +132,11 @@ const Index = ({
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <p className="mt-2">Deposited Date</p>
-
-              <label>
-                <div className="d-flex align-items-center">
-                  <Controller
-                    control={control}
-                    name="deposited_date"
-                    render={({ field }) => (
-                      <DatePicker
-                        name="deposited_date"
-                        placeholderText={"choose date"}
-                        selected={field.value}
-                        dateFormat="dd-MM-yyyy"
-                        onChange={field.onChange}
-                        peekNextMonth
-                        showMonthDropdown
-                        showYearDropdown
-                        dropdownMode="select"
-                        closeOnScroll={true}
-                        disabledKeyboardNavigation
-                      />
-                    )}
-                  />
-                  <BsCalendarDate fontSize={32} cursor={"pointer"} />
-                </div>
-              </label>
+              <Form.Control
+                type="text"
+                placeholder="Enter Deposited Date"
+                {...register("deposited_date")}
+              />
               <p style={{ color: "red" }}>{errors.deposited_date?.message}</p>
             </Form.Group>
 
