@@ -45,7 +45,10 @@ export default function Login() {
 
     let user;
     user = StudentData.find((ele) => {
-      return ele.parentNumber == data.parent_number;
+      return (
+        ele.parentNumber == data.parent_number &&
+        ele.studentName.toLowerCase() == data.name.toLowerCase()
+      );
     });
 
     localStorage.setItem("studentData", JSON.stringify(user));
